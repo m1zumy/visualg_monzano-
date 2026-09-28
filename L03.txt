@@ -1,0 +1,284 @@
+algoritmo "L03A"
+
+var
+   numero, i: inteiro
+
+inicio
+
+   escreva("Digite um numero para a tabuada: ")
+   leia(numero)
+
+   i <- 1
+
+   enquanto i <= 10 faca
+      escreval(numero, " x ", i, " = ", numero * i)
+      i <- i + 1
+   fimenquanto
+
+fimalgoritmo
+
+----------------------------------------
+
+algoritmo "L03B"
+
+var
+   i, soma: inteiro
+
+inicio
+
+   i <- 1
+   soma <- 0
+
+   enquanto i <= 100 faca
+      soma <- soma + i
+      i <- i + 1
+   fimenquanto
+
+   escreva("A soma dos 100 numeros é: ", soma)
+
+fimalgoritmo
+
+-------------------------------------------
+
+algoritmo "L03C"
+
+var
+  soma, contador, pares: inteiro
+
+inicio
+
+  soma <- 0
+  contador <- 0
+
+  enquanto contador <= 500 faca
+    pares <- contador MOD 2
+
+    se (pares = 0) entao
+      soma <- soma + contador
+    senao
+      escreval(contador)
+    fimse
+    contador <- contador + 1
+  fimenquanto
+  escreval(soma)
+
+
+fimalgoritmo
+
+------------------------------------------
+
+algoritmo "L03D"
+
+var
+  contador, impares: inteiro
+
+inicio
+
+  contador <- 0
+
+  enquanto contador <= 20 faca
+    impares <- contador MOD 2
+    se (impares = 1) entao
+      escreval(contador)
+    fimse
+    contador <- contador + 1
+  fimenquanto
+
+fimalgoritmo
+
+-------------------------------------------
+
+algoritmo "L03E"
+
+var
+  expoente, resultado: inteiro
+
+inicio
+
+  expoente <- 0
+  resultado <- 1
+
+  enquanto expoente <= 15 faca
+  escreval("O resultado atual é ", resultado)
+  resultado <- resultado * 3
+  expoente <- expoente + 1
+  fimenquanto
+fimalgoritmo
+
+--------------------------------------------
+
+algoritmo "L03G"
+
+var
+  proximo, anterior, atual, contador: inteiro
+
+inicio
+
+  anterior <- 1
+  atual <- 1
+  contador <- 0
+
+  enquanto contador <= 13 faca
+    proximo <- anterior + atual
+    escreval(proximo)
+    anterior <- atual
+    atual <- proximo
+    contador <- contador + 1
+  fimenquanto
+
+fimalgoritmo
+
+-----------------------------------------------
+
+algoritmo "L03H"
+
+var
+  celsius, fahrenheit: inteiro
+
+inicio
+
+  celsius <- 10
+
+  enquanto celsius <= 100 faca
+     
+    fahrenheit <- (9 * celsius / 5) + 32
+    escreval("o valor em celsius é ", celsius, " e em fahrenhenit é ", fahrenheit)
+    celsius <- celsius + 10
+  fimenquanto
+fimalgoritmo
+
+------------------------------------------------
+
+algoritmo "L03I"
+
+var
+  valores, contador: inteiro
+  soma: real
+inicio
+
+  valores <- 0
+  contador <- 0
+  soma <- 0
+
+  enquanto contador < 10 faca
+    leia(valores)
+    soma <- soma + valores
+    escreval(soma)
+    contador <- contador + 1
+  fimenquanto
+
+  soma <- (soma /10)
+  escreval(soma)
+    
+
+fimalgoritmo
+
+-------------------------------------------------
+
+
+algoritmo "L03I"
+
+var
+   contador, pares: inteiro
+   soma: real
+inicio
+
+   contador <- 50
+   soma <- 0
+
+   enquanto contador <= 70 faca
+      pares <- contador MOD 2
+      se (pares = 0) entao
+         soma <- soma + contador
+      fimse
+      contador <- contador + 1
+      escreval(soma)
+   fimenquanto
+
+   soma <- (soma / 11)
+   escreval(soma)
+
+fimalgoritmo
+
+--------------------------------------------------
+
+algoritmo "L03K"
+
+var
+  nomeComodo, continuar: caractere
+  area, largura, comprimento, totalArea: real
+
+inicio
+
+  continuar <- "sim"
+  totalArea <- 0
+
+  enquanto continuar <> "nao" faca
+   escreval("------------------------------")
+   escreval("Programa para calcular a area")
+   escreval("------------------------------")
+
+   escreval("Qual o nome do comodo?")
+   leia(nomeComodo)
+   escreval("Qual a largura do comodo?")
+   leia(largura)
+   escreval("Qual é o comprimento do comodo?")
+   leia(comprimento)
+   escreval("O nome do comodo é ", nomeComodo, " ele tem a seguinte largura ", largura, " e o seguinte cumprimento ", comprimento )
+   area <- largura * comprimento
+   escreval("tamanho da area deste comodo ", area)
+
+
+   escreval("--------------------")
+   escreval("Tem mais algum comodo digite 'sim' caso contrario digite 'nao'")
+   leia(continuar)
+
+   totalArea <- totalArea + area
+  
+  fimenquanto
+
+  escreval("A Area total da sua residencia é ", totalArea)
+
+fimalgoritmo
+
+--------------------------------------------------------------------
+
+algoritmo "L03L"
+
+var
+   valorDigitado, maior, menor: inteiro
+
+inicio
+
+   escreval("Digite valores positivos. Um valor negativo encerra o programa.")
+   leia(valorDigitado)
+
+   se valorDigitado >= 0 entao
+      maior <- valorDigitado
+      menor <- valorDigitado
+
+      enquanto valorDigitado >= 0 faca
+
+         escreval("O valor que voce digitou foi: ", valorDigitado)
+
+         se valorDigitado > maior entao
+            maior <- valorDigitado
+         fimse
+
+         se valorDigitado < menor entao
+            menor <- valorDigitado
+         fimse
+
+         leia(valorDigitado)
+
+      fimenquanto
+
+      escreval("O maior valor digitado foi: ", maior)
+      escreval("O menor valor digitado foi: ", menor)
+
+   senao
+      escreval("Nenhum valor positivo foi informado.")
+
+   fimse
+
+fimalgoritmo

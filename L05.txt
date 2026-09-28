@@ -1,0 +1,207 @@
+algoritmo "L05A"
+
+var
+   i: inteiro
+
+inicio
+
+   para i de 15 ate 200 faca
+      escreval(i ^ 2)
+   fimpara
+
+fimalgoritmo
+
+----------------------------------------
+
+algoritmo "L05B"
+
+var
+   numeroTabuada, i: inteiro
+
+inicio
+
+   escreva("Digite o numero da tabuada: ")
+   leia(numeroTabuada)
+
+   para i de 1 ate 10 faca
+      escreval(numeroTabuada, " x ", i, " = ", numeroTabuada * i)
+   fimpara
+
+fimalgoritmo
+
+----------------------------------------------
+
+algoritmo "L05C"
+
+var
+   i, soma: inteiro
+
+inicio
+
+   soma <- 0
+
+   para i de 0 ate 100 faca
+      soma <- soma + i
+   fimpara
+
+   escreval(soma)
+
+fimalgoritmo
+
+--------------------------------------------------
+
+algoritmo "L05D"
+
+var
+   i, soma: inteiro
+
+inicio
+
+   soma <- 0
+
+   para i de 0 ate 500 passo 2 faca
+      soma <- soma + i
+   fimpara
+
+   escreval(soma)
+
+fimalgoritmo
+
+----------------------------------------------------
+
+algoritmo "L05E"
+
+var
+   i: inteiro
+
+inicio
+
+   para i de 1 ate 20 faca
+      se i % 2 = 1 entao
+         escreval(i)
+      fimse
+   fimpara
+
+fimalgoritmo
+
+--------------------------------------------------------
+
+algoritmo "L05F"
+
+var
+   i: inteiro
+
+inicio
+
+   para i de 1 ate 20 faca
+      se i % 4 = 0 entao
+         escreval(i)
+      fimse
+   fimpara
+
+fimalgoritmo
+
+-----------------------------------------------------------
+
+algoritmo "L05G"
+
+var
+   i, resultado: inteiro
+
+inicio
+
+   resultado <- 1
+
+   para i de 0 ate 15 faca
+      escreval(resultado)
+      resultado <- resultado * 3
+   fimpara
+
+fimalgoritmo
+
+-----------------------------------------------------------
+
+algoritmo "L05H"
+
+var
+   expoente, base, i, resultado: inteiro
+
+inicio
+
+   escreva("Digite o expoente: ")
+   leia(expoente)
+
+   escreva("Coloque a base: ")
+   leia(base)
+
+   resultado <- 1
+
+   para i de 1 ate expoente faca
+      resultado <- resultado * base
+   fimpara
+
+   escreval("A base ", base, " com o expoente ", expoente, " = ", resultado)
+
+fimalgoritmo
+
+---------------------------------------------------------------
+
+algoritmo "L05I"
+
+var
+   anterior, atual, proximo, i: inteiro
+
+inicio
+
+   anterior <- 1
+   atual <- 1
+
+   para i de 1 ate 15 faca
+      escreval(atual)
+
+      proximo <- anterior + atual
+      anterior <- atual
+      atual <- proximo
+   fimpara
+
+fimalgoritmo
+
+-----------------------------------------------------------------
+
+algoritmo "L05J"
+
+var
+   celsius: inteiro
+
+inicio
+
+   para celsius de 10 ate 100 passo 10 faca
+      escreval("O valor em fahrenheit é: ", (9 * celsius / 5) + 32)
+   fimpara
+
+fimalgoritmo
+
+------------------------------------------------------------------
+
+algoritmo "L05K"
+
+var
+   fatorial, i, j: inteiro
+
+inicio
+
+   fatorial <- 1
+
+   para i de 1 ate 10 faca
+      se i % 2 = 1 entao
+         fatorial <- 1
+
+         para j de 1 ate i faca
+            fatorial <- fatorial * j
+         fimpara
+
+         escreval(fatorial)
+      fimse
+   fimpara
+
+fimalgoritmo

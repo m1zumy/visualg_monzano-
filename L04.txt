@@ -1,0 +1,257 @@
+algoritmo "L04A"
+
+var
+  i: inteiro
+
+inicio
+
+  i <- 15
+  repita
+    escreval(i * i)
+    i <- i + 1
+  ate i > 200
+
+fimalgoritmo
+
+---------------------------------------------------------
+
+algoritmo "L04B"
+
+var
+  i,soma: inteiro
+
+inicio
+
+  i <- 1
+  soma <- 0
+  repita
+  se (i MOD 2 = 0) entao
+  soma <- soma + i
+  fimse
+  i <- i + 1
+  ate i > 500
+
+  escreval(soma)
+fimalgoritmo
+
+-------------------------------------------------------------
+
+algoritmo "L04C"
+
+var
+  i: inteiro
+
+inicio
+
+  i <- 1
+  repita
+  se (i MOD 4 = 0) entao
+    escreval(i)
+  fimse
+  i <- i + 1
+  ate i > 201
+
+fimalgoritmo
+
+------------------------------------------------------------
+
+algoritmo "L03D"
+
+var
+  quadros: inteiro
+  grao, soma: real
+
+inicio
+
+  quadros <- 1
+  grao <- 1
+  soma <- 0
+
+  repita
+  soma <- soma + grao
+  grao <- grao * 2
+  quadros <- quadros + 1
+  ate quadros > 64
+
+  escreval(soma)
+
+fimalgoritmo
+
+------------------------------------------------------------
+
+algoritmo "L04E"
+
+var
+  contador, soma, valor, fatorial, i: inteiro
+
+inicio
+
+  contador <- 1
+  soma <- 0
+  repita
+    escreval("Digite um valor: ")
+    leia(valor)
+    fatorial <- 1
+    i <- 1
+    repita
+    fatorial <- fatorial * i
+    i <- i + 1
+    ate i > valor
+    
+    soma <- soma + fatorial
+    contador <- contador + 1
+  ate contador > 15
+
+  escreval(soma)
+
+fimalgoritmo
+
+------------------------------------------------------------
+
+algoritmo "L04F"
+
+var
+  valor, soma, contador, media: real
+
+inicio
+
+  repita
+  escreval("Digite um valor: ")
+  leia(valor)
+
+  se (valor > 0) entao
+  soma <- soma + valor
+  contador <- contador + 1
+  fimse
+  ate valor < 0
+
+  se (contador > 0) entao
+  media <- soma / contador
+
+  escreval(soma)
+  escreval(contador)
+  escreval(media)
+  senao 
+  escreval("Nenhum valor positivo foi informado")
+  fimse
+
+fimalgoritmo
+
+-------------------------------------------------------------
+
+algoritmo "L04G"
+
+var
+  i, fatorial, j: inteiro
+
+inicio
+
+  i <- 1
+
+  repita
+   se (i MOD 2 = 1) entao
+    fatorial <- 1
+    j <- 1
+    repita
+    fatorial <- fatorial * j
+    j <- j + 1
+    ate j > i
+
+    escreval(fatorial)
+    fimse
+    i <- i + 1
+    ate i > 10
+
+fimalgoritmo
+
+------------------------------------------------------------------
+
+algoritmo "L04H"
+
+var
+  nome, continuar: caractere
+  largura, comprimento, area, totalArea: inteiro
+
+inicio
+
+  totalArea <- 0
+
+  repita
+  escreval("Nome do comodo: ")
+  leia(nome)
+  escreval("Largura: ")
+  leia(largura)
+  escreval("Comprimento: ")
+  leia(comprimento)
+
+  area <- largura * comprimento
+
+  escreval("Area do ", nome, " : ", area, "m2")
+
+  totalArea <- totalArea + area
+
+  escreval("DESEJA CONTINUAR (SIM/NAO)")
+  leia(continuar)
+  ate continuar = "NAO"
+
+  escreval("Area total: ", totalArea, "m2")
+fimalgoritmo
+
+-----------------------------------------------------------
+
+algoritmo "L04I"
+
+var
+  valor, maior, menor: inteiro
+
+inicio
+
+escreval("Digite um valor: ")
+leia(valor)
+maior <- valor
+menor <- valor
+
+repita
+escreval("Digite um valor: ")
+leia(valor)
+
+se (valor > 0) entao
+se (valor > maior) entao
+maior <- valor
+fimse
+se (valor < menor) entao
+menor <- valor
+fimse
+fimse
+ate valor < 0
+
+escreval(maior)
+escreval(menor)
+
+fimalgoritmo
+
+-----------------------------------------------
+
+algoritmo "L04J"
+
+var
+   dividendo, divisor, quociente: inteiro
+
+inicio
+
+   escreval("Digite o dividendo: ")
+   leia(dividendo)
+
+   escreval("Digite o divisor: ")
+   leia(divisor)
+
+   quociente <- 0
+
+   repita
+      dividendo <- dividendo - divisor
+      quociente <- quociente + 1
+   ate dividendo < divisor
+
+   escreval("Quociente: ", quociente)
+
+fimalgoritmo
